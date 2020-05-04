@@ -19,7 +19,7 @@ class App extends Component{
     this.getData().then(() => console.log("received questions"));
   }
   async getData() {
-    const url = "https://new-stackoverflow.herokuapp.com/api/questions";
+    const url = "http://localhost:8080/api/questions";
     const response = await fetch(url);
     const data = await response.json();
    return this.setState({
@@ -35,7 +35,7 @@ class App extends Component{
   async postQuestion(title, desc) {
 
     console.log("postQuestion", title, desc);
-    const url = `https://new-stackoverflow.herokuapp.com/api/questions`;
+    const url = `http://localhost:8080/api/questions`;
 
     const response = await fetch(url, {
       headers: {
@@ -58,7 +58,7 @@ class App extends Component{
 
   async postAnswer(answer, questionId) {
     console.log("postAnswer", answer, questionId);
-    const url = `https://new-stackoverflow.herokuapp.com/api/questions/${questionId}`;
+    const url = `http://localhost:8080/api/questions/${questionId}`;
 
     const response = await fetch(url, {
       headers: {
@@ -99,7 +99,7 @@ class App extends Component{
   }
 
   async voting(answer, questionId) {
-    const response = await fetch(`https://new-stackoverflow.herokuapp.com/api/questions/${questionId}`, {
+    const response = await fetch(`http://localhost:8080/api/questions/${questionId}`, {
       headers: {
         'Content-Type': 'application/json'
       },

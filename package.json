@@ -17,15 +17,12 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "scripts": {
-    "start": "cd server && node app.js",
-    "dev": "cd client && npm start",
-    "test": "cd client && npm test",
-    "preinstall": "cd server && npm install",
-    "install": "cd client && npm install",
-    "build": "cd client && npm run build"
+    "start": "cd que_api && node app.js",
+    "dev": "cd que_client && npm start",
+    "test": "cd que_client && npm test",
+    "preinstall": "cd que_api && npm install",
+    "install": "cd que_client && npm install",
+    "build": "cd que_client && npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"

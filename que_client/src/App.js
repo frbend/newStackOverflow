@@ -70,6 +70,7 @@ class App extends Component{
       })
     });
     const data = await response.json();
+    await this.getData();
     console.log("Printing the response:", data);
   };
 
